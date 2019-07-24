@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		BFBA6EEA22E90EB200D8311D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA6EE922E90EB200D8311D /* AppDelegate.swift */; };
-		BFBA6EEC22E90EB200D8311D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA6EEB22E90EB200D8311D /* ViewController.swift */; };
 		BFBA6EEF22E90EB200D8311D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBA6EED22E90EB200D8311D /* Main.storyboard */; };
 		BFBA6EF122E90EB300D8311D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFBA6EF022E90EB300D8311D /* Assets.xcassets */; };
 		BFBA6EF422E90EB300D8311D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBA6EF222E90EB300D8311D /* LaunchScreen.storyboard */; };
+		BFBA6EFC22E9102F00D8311D /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA6EFB22E9102F00D8311D /* CountriesTableViewController.swift */; };
+		BFBA6EFF22E9134900D8311D /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBA6EFE22E9134900D8311D /* Countries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BFBA6EE622E90EB200D8311D /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBA6EE922E90EB200D8311D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFBA6EEB22E90EB200D8311D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFBA6EEE22E90EB200D8311D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFBA6EF022E90EB300D8311D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFBA6EF322E90EB300D8311D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFBA6EF522E90EB300D8311D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFBA6EFB22E9102F00D8311D /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
+		BFBA6EFE22E9134900D8311D /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,30 @@
 			isa = PBXGroup;
 			children = (
 				BFBA6EE922E90EB200D8311D /* AppDelegate.swift */,
-				BFBA6EEB22E90EB200D8311D /* ViewController.swift */,
 				BFBA6EED22E90EB200D8311D /* Main.storyboard */,
 				BFBA6EF022E90EB300D8311D /* Assets.xcassets */,
 				BFBA6EF222E90EB300D8311D /* LaunchScreen.storyboard */,
 				BFBA6EF522E90EB300D8311D /* Info.plist */,
+				BFBA6EFD22E9103500D8311D /* Controller */,
+				BFBA6F0022E9138700D8311D /* Model */,
 			);
 			path = Countries;
+			sourceTree = "<group>";
+		};
+		BFBA6EFD22E9103500D8311D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA6EFB22E9102F00D8311D /* CountriesTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFBA6F0022E9138700D8311D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFBA6EFE22E9134900D8311D /* Countries.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFBA6EEC22E90EB200D8311D /* ViewController.swift in Sources */,
+				BFBA6EFC22E9102F00D8311D /* CountriesTableViewController.swift in Sources */,
+				BFBA6EFF22E9134900D8311D /* Countries.swift in Sources */,
 				BFBA6EEA22E90EB200D8311D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
