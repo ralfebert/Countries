@@ -1,0 +1,13 @@
+name: Countries
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "13.0"
+targets:
+  Countries:
+    type: application
+    platform: iOS
+    sources: [Countries]
+    settings:
+      base:
+        SWIFT_VERSION: 5.0
