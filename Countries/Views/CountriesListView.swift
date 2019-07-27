@@ -28,8 +28,17 @@ var countriesPublisher: AnyPublisher<[Country], Never> = {
 
 struct CountriesListView: View {
 
-    @State var countries = [Country]()
-
+    @State private var countries = [Country]()
+    private var publisher : AnyPublisher<[Country], Never>?
+    
+    init(countries : [Country] = []) {
+        self.publisher = Just(countries).eraseToAnyPublisher()
+    }
+    
+    init(publisher : AnyPublisher<[Country], Never>) {
+        self.publisher = publisher
+    }
+    
     var body: some View {
 
         List(countries) { country in
@@ -43,7 +52,7 @@ struct CountriesListView: View {
 }
 
 #if DEBUG
-    struct ContentView_Previews: PreviewProvider {
+    struct CountriesListView_Previews: PreviewProvider {
         static var previews: some View {
             return CountriesListView(countries: Country.exampleCountries)
         }
