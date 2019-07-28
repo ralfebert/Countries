@@ -1,0 +1,62 @@
+[
+    {
+        "iso2": "BE",
+        "name": "Belgien",
+        "landmark": {
+            "name": "Europäisches Parlament in Brüssel",
+            "latitude": 48.597512,
+            "longitude": 7.769092,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/European_Parliament_Brussels_plenary_sessions_hemicycle.jpg",
+            "metadata_url": "https://commons.wikimedia.org/wiki/File:European_Parliament_Brussels_plenary_sessions_hemicycle.jpg",
+            "copyright": "Licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Author: MichalPL"
+        }
+    },
+    {
+        "iso2": "FR",
+        "name": "Frankreich",
+        "landmark": {
+            "name": "Eiffelturm in Paris",
+            "latitude": 48.858222,
+            "longitude": 2.2945,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/The_Eiffel_Tower_seen_from_Esplanade_du_Trocaredo_%28Paris%2C_France%2C_DSC_0344%29.jpg",
+            "metadata_url": "https://commons.wikimedia.org/wiki/File:The_Eiffel_Tower_seen_from_Esplanade_du_Trocaredo_(Paris,_France,_DSC_0344).jpg",
+            "copyright": "Licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Author: Trougnouf"
+        }
+    },
+    {
+        "iso2": "DE",
+        "name": "Deutschland",
+        "landmark": {
+            "name": "Brandenburger Tor in Berlin",
+            "latitude": 52.516272,
+            "longitude": 13.377722,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Brandenburg_Gate_%288324920752%29.jpg",
+            "metadata_url": "https://commons.wikimedia.org/wiki/File:Brandenburg_Gate_(8324920752).jpg",
+            "copyright": "Licensed under the Creative Commons Attribution 2.0 Generic license. Author: Steve Collis from Melbourne, Australia."
+        }
+    },
+    {
+        "iso2": "EL",
+        "name": "Griechenland",
+        "landmark": {
+            "name": "Akropolis in Athen",
+            "latitude": 37.970833,
+            "longitude": 23.726111,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Athen%2C_Akropolis%2C_Parthenon%2C_S%C3%BCdosten_2015-09.jpg",
+            "metadata_url": "https://commons.wikimedia.org/wiki/File:Athen,_Akropolis,_Parthenon,_S%C3%BCdosten_2015-09.jpg",
+            "copyright": "Licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Author: HerrAdams"
+        }
+    },
+    {
+        "iso2": "AT",
+        "name": "Österreich",
+        "landmark": {
+            "name": "Österreichische Alpen",
+            "latitude": 47.074531,
+            "longitude": 12.6939,
+            "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Gro%C3%9Fglockner_Hochalpenstra%C3%9Fe.JPG",
+            "metadata_url": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fglockner_Hochalpenstra%C3%9Fe.JPG",
+            "copyright": "Licensed under the Creative Commons Attribution-Share Alike 3.0 Austria license. Author: Pusteblume91"
+        }
+    }
+]
