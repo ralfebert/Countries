@@ -54,4 +54,15 @@ class GalleryCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    // MARK: - Segues
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let controller = segue.destination as? CountryViewController, let cell = sender as? UICollectionViewCell, let indexPath = self.collectionView.indexPath(for: cell) {
+            let country = self.countries[indexPath.row]
+            controller.country = country
+        }
+
+    }
+
 }

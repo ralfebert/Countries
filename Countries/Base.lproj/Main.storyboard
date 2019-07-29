@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9uE-eu-ehn">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nyQ-xC-XF3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gallery Collection View Controller-->
+        <!--Länder-->
         <scene sceneID="uIh-pP-ifM">
             <objects>
                 <collectionViewController id="9uE-eu-ehn" customClass="GalleryCollectionViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,6 +42,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="eBq-w5-hdO" id="p6c-7L-8Sa"/>
+                                    <segue destination="PgH-db-CBO" kind="show" id="Exi-TZ-iGz"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -52,10 +51,61 @@
                             <outlet property="delegate" destination="9uE-eu-ehn" id="sjM-bq-cBi"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Länder" id="eN2-aQ-5El"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHq-T9-65V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1175.3623188405797" y="50.892857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QSq-bh-VTN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nyQ-xC-XF3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y7P-Fm-fNd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9uE-eu-ehn" kind="relationship" relationship="rootViewController" id="PQV-a1-19s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RQu-Gz-gLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="265.21739130434787" y="50.892857142857139"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="abx-d4-lZO">
+            <objects>
+                <viewController id="PgH-db-CBO" customClass="CountryViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qru-nL-ev5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qbT-H2-tTE">
+                                <rect key="frame" x="0.0" y="344.5" width="414" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qbT-H2-tTE" secondAttribute="height" multiplier="2:1" id="CzA-6r-95C"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qbT-H2-tTE" firstAttribute="centerY" secondItem="Qru-nL-ev5" secondAttribute="centerY" id="IkP-4y-ogk"/>
+                            <constraint firstItem="qbT-H2-tTE" firstAttribute="leading" secondItem="n8Y-ue-LdY" secondAttribute="leading" id="vge-dT-Rw9"/>
+                            <constraint firstItem="n8Y-ue-LdY" firstAttribute="trailing" secondItem="qbT-H2-tTE" secondAttribute="trailing" id="w5y-Dj-YCd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n8Y-ue-LdY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageAspectRatioConstraint" destination="CzA-6r-95C" id="ETe-x2-gOi"/>
+                        <outlet property="imageView" destination="qbT-H2-tTE" id="l1t-yR-8eo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAQ-9b-RvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1967" y="51"/>
         </scene>
     </scenes>
 </document>
