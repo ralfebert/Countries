@@ -1,0 +1,3 @@
+language: swift
+osx_image: xcode10.2
+script: xcodebuild -project Countries.xcodeproj -scheme Countries -destination "platform=iOS Simulator,OS=12.2,name=iPhone SE" build | xcpretty
