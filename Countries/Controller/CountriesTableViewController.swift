@@ -1,5 +1,5 @@
 // (C) 2019, Ralf Ebert - iOS Example Project: Countries
-// License: https://opensource.org/licenses/0BSD
+// License: https://opensource.org/licenses/MIT
 
 import UIKit
 
@@ -29,6 +29,12 @@ class CountriesTableViewController: UITableViewController {
         cell.textLabel?.text = country.name
 
         return cell
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? CountryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell) {
+            controller.country = self.countries[indexPath.row]
+        }
     }
 
 }
