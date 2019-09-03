@@ -9,7 +9,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Globales Styling via UINavigationBarAppearance / UITabBarAppearance / UIToolbarAppearance
+
+        if #available(iOS 13.0, *) {
+            let navBarStandardAppearance = UINavigationBarAppearance()
+            navBarStandardAppearance.backgroundColor = .blue
+            navBarStandardAppearance.titleTextAttributes = [.foregroundColor: UIColor.yellow]
+            UINavigationBar.appearance().standardAppearance = navBarStandardAppearance
+
+            let navBarScrollEdgeAppearance = UINavigationBarAppearance()
+            navBarScrollEdgeAppearance.backgroundColor = .yellow
+            UINavigationBar.appearance().scrollEdgeAppearance = navBarScrollEdgeAppearance
+
+            let navBarCompactAppearance = UINavigationBarAppearance()
+            navBarCompactAppearance.backgroundColor = .red
+            UINavigationBar.appearance().compactAppearance = navBarCompactAppearance
+
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.backgroundColor = .orange
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+        }
+
         return true
     }
 
