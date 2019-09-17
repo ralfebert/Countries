@@ -2,7 +2,7 @@ name: Countries
 options:
   bundleIdPrefix: com.example
   deploymentTarget:
-    iOS: "10.0"
+    iOS: "13.0"
 targets:
   Countries:
     type: application
