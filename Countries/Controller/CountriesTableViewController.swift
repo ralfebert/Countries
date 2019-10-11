@@ -31,10 +31,4 @@ class CountriesTableViewController: UITableViewController {
         return cell
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? CountryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell) {
-            controller.country = self.countries[indexPath.row]
-        }
-    }
-
 }
