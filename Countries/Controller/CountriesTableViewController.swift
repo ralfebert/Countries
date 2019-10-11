@@ -11,11 +11,7 @@ class CountriesTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+    // MARK: - UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.countries.count
@@ -29,12 +25,6 @@ class CountriesTableViewController: UITableViewController {
         cell.textLabel?.text = country.name
 
         return cell
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let controller = segue.destination as? CountryViewController, let cell = sender as? UITableViewCell, let indexPath = self.tableView.indexPath(for: cell) {
-            controller.country = self.countries[indexPath.row]
-        }
     }
 
 }
