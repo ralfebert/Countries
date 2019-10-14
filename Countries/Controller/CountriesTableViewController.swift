@@ -5,10 +5,33 @@ import UIKit
 
 class CountriesTableViewController: UITableViewController {
 
-    let countries = Country.allCountries
+    var countries = [Country]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let url = URL(string: "https://www.ralfebert.de/examples/countries.json")!
+
+        let urlSession = URLSession.shared
+
+        let task = urlSession.dataTask(with: url) { data, _, error in
+            // Fehlerbehandlung für den Fall, das ein Fehler aufgetreten ist und data nicht gesetzt ist
+            guard let data = data else {
+                debugPrint("Fehler beim Laden", error ?? "Unbekannter Fehler")
+                return
+            }
+
+            // JSON parsen
+            self.countries = try! JSONDecoder().decode([Country].self, from: data)
+
+            // UI-Darstellung aktualisieren
+            OperationQueue.main.addOperation {
+                self.tableView.reloadData()
+            }
+        }
+
+        task.resume()
+
     }
 
     // MARK: - Table view data source
