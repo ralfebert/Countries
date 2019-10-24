@@ -9,7 +9,15 @@ struct CountryListView: View {
 
     var body: some View {
 
-        Text("\(countries.count) Länder")
+        NavigationView {
+            List(countries) { country in
+                NavigationLink(destination: CountryView(country: country)) {
+                    CountryRowView(country: country)
+                }
+            }
+            .navigationBarTitle("Länder")
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
 
     }
 }

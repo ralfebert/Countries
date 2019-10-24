@@ -18,8 +18,10 @@ struct Landmark: Codable {
     }
 }
 
-struct Country: Codable {
+struct Country: Codable, Identifiable {
 
+    var id: String { self.iso2 }
+    
     var iso2: String
     var name: String
     var landmark: Landmark
