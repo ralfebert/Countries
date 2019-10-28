@@ -1,5 +1,5 @@
-// (C) 2019, Ralf Ebert - iOS Example Project: Countries
-// License: https://opensource.org/licenses/0BSD
+// © 2019 Ralf Ebert — iOS Example Project: Countries
+// License: https://opensource.org/licenses/MIT
 
 import UIKit
 
