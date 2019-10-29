@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TDU-1l-sRw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hnf-RT-dcQ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Gallery Collection View Controller-->
+        <!--Länder-->
         <scene sceneID="L02-2z-aCq">
             <objects>
                 <collectionViewController id="TDU-1l-sRw" customClass="GalleryCollectionViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,6 +45,7 @@
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
                                     <outlet property="imageView" destination="RJX-4E-NLr" id="4WY-w9-B7u"/>
+                                    <segue destination="ICs-UA-VWp" kind="show" id="DIC-dC-9qf"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -52,10 +54,62 @@
                             <outlet property="delegate" destination="TDU-1l-sRw" id="wuf-sC-lMc"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Länder" id="ywk-FH-eoz"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eny-eh-adn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873.91304347826099" y="-152.00892857142856"/>
+            <point key="canvasLocation" x="1784.057971014493" y="-152.00892857142856"/>
+        </scene>
+        <!--Country View Controller-->
+        <scene sceneID="pEe-ux-KDG">
+            <objects>
+                <viewController id="ICs-UA-VWp" customClass="CountryViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Rp-sC-dTA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ZS-7q-BYu">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9ZS-7q-BYu" secondAttribute="height" multiplier="1:1" id="HDr-uJ-E1m"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9ZS-7q-BYu" firstAttribute="centerY" secondItem="8Rp-sC-dTA" secondAttribute="centerY" id="bQ8-Em-cLH"/>
+                            <constraint firstItem="9ZS-7q-BYu" firstAttribute="leading" secondItem="nBl-4l-RLB" secondAttribute="leading" id="sLe-kT-9cW"/>
+                            <constraint firstItem="nBl-4l-RLB" firstAttribute="trailing" secondItem="9ZS-7q-BYu" secondAttribute="trailing" id="x8X-MU-QWb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nBl-4l-RLB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qgv-7L-UF0"/>
+                    <connections>
+                        <outlet property="imageAspectRatioConstraint" destination="HDr-uJ-E1m" id="hh7-He-YA8"/>
+                        <outlet property="imageView" destination="9ZS-7q-BYu" id="twA-Yj-AX8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3sd-wF-10Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2573.913043478261" y="-152.00892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pxt-TJ-vXF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hnf-RT-dcQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jYg-s9-PVo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TDU-1l-sRw" kind="relationship" relationship="rootViewController" id="x0q-5H-3sG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wSK-EV-8rn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1025" y="-152"/>
         </scene>
     </scenes>
 </document>
