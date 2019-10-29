@@ -1,6 +1,7 @@
 // © 2019 Ralf Ebert — iOS Example Project: Countries
 // License: https://opensource.org/licenses/MIT
 
+import Kingfisher
 import UIKit
 
 class CountryTableViewCell: UITableViewCell {
@@ -31,7 +32,8 @@ class CountriesTableViewController: UITableViewController {
         let country = self.countries[indexPath.row]
 
         cell.countryNameLabel.text = country.name
-        cell.countryImageView.image = UIImage(named: "placeholder")
+        cell.countryImageView.kf.indicatorType = .activity
+        cell.countryImageView.kf.setImage(with: country.landmark.imageUrl, placeholder: UIImage(named: "placeholder"))
 
         return cell
     }
