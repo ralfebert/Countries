@@ -17,6 +17,9 @@ class CountryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            self.enableContextMenu()
+        }
     }
 
     override func viewWillLayoutSubviews() {

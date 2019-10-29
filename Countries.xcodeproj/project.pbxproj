@@ -14,6 +14,7 @@
 		72356B26B68B00D61EE5262E /* Country+Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214D118648CA39D3D9D9856E /* Country+Maps.swift */; };
 		86A1E31873ACF284637B07EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB44D56D3C51F8F4C1888430 /* Main.storyboard */; };
 		9C9C0F7F9B515EEBADDF3B49 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F165044B0EF69A450B8C0A1 /* Country.swift */; };
+		D049F6EE19022068DD15ED67 /* CountryContextMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96186BF1A1638C563033A76B /* CountryContextMenus.swift */; };
 		ED8FE90274389AC188976413 /* CountriesAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B545185C076A435928CBFDD /* CountriesAppDelegate.swift */; };
 		F7A304CACE391992074DB1D8 /* CountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8428E40B09B3D4A2D8EAE5 /* CountryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 		6B0E4E5A1C5DA1C799CE3EE8 /* countries.json */ = {isa = PBXFileReference; path = countries.json; sourceTree = "<group>"; };
 		6F165044B0EF69A450B8C0A1 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		84306E3F851F05E239AD4C78 /* Countries.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96186BF1A1638C563033A76B /* CountryContextMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryContextMenus.swift; sourceTree = "<group>"; };
 		CC6FF3B792659FFCA32D8462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				214D118648CA39D3D9D9856E /* Country+Maps.swift */,
+				96186BF1A1638C563033A76B /* CountryContextMenus.swift */,
 				0A8428E40B09B3D4A2D8EAE5 /* CountryViewController.swift */,
 				39F7B928366CE9D89971914E /* GalleryCollectionViewController.swift */,
 			);
@@ -163,6 +166,7 @@
 				ED8FE90274389AC188976413 /* CountriesAppDelegate.swift in Sources */,
 				72356B26B68B00D61EE5262E /* Country+Maps.swift in Sources */,
 				9C9C0F7F9B515EEBADDF3B49 /* Country.swift in Sources */,
+				D049F6EE19022068DD15ED67 /* CountryContextMenus.swift in Sources */,
 				F7A304CACE391992074DB1D8 /* CountryViewController.swift in Sources */,
 				6C43B4152581FF9DD181F3BD /* GalleryCollectionViewController.swift in Sources */,
 			);
