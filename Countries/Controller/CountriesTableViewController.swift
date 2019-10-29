@@ -3,12 +3,29 @@
 
 import UIKit
 
-class CountriesTableViewController: UITableViewController {
+class CountriesTableViewController: UITableViewController, UISearchResultsUpdating {
 
-    let countries = Country.allCountries
+    var countries = Country.allCountries
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.setupSearch()
+    }
+
+    // MARK: - Search
+
+    private let searchController = UISearchController(searchResultsController: nil)
+
+    func setupSearch() {
+        self.navigationItem.searchController = self.searchController
+        self.searchController.searchResultsUpdater = self
+
+        // Such-Bar immer sichtbar machen
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+
+        // Ausgegraute Darstellung der Suchergebnisse deaktivieren
+        self.searchController.obscuresBackgroundDuringPresentation = false
     }
 
     // MARK: - UITableViewDataSource
@@ -25,6 +42,23 @@ class CountriesTableViewController: UITableViewController {
         cell.textLabel?.text = country.name
 
         return cell
+    }
+
+    // MARK: - UISearchResultsUpdating
+
+    func updateSearchResults(for searchController: UISearchController) {
+        // Länderliste filtern, wenn ein Suchtext eingegeben wird
+        // Ansonsten alle Länder anzeigen - damit wird auch der Cancel-Fall behandelt
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            self.countries = Country.allCountries.filter { country in
+                country.name.localizedCaseInsensitiveContains(searchText)
+            }
+        } else {
+            self.countries = Country.allCountries
+        }
+
+        // UITableView aktualisieren
+        self.tableView.reloadData()
     }
 
 }
