@@ -1,9 +1,9 @@
 [
     {
         "iso2": "BE",
-        "name": "Belgien",
+        "name": "Belgium",
         "landmark": {
-            "name": "Europäisches Parlament in Brüssel",
+            "name": "European Parliament in Brussels",
             "latitude": 48.597512,
             "longitude": 7.769092,
             "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/European_Parliament_Brussels_plenary_sessions_hemicycle.jpg",
@@ -13,9 +13,9 @@
     },
     {
         "iso2": "FR",
-        "name": "Frankreich",
+        "name": "France",
         "landmark": {
-            "name": "Eiffelturm in Paris",
+            "name": "Eiffel Tower in Paris",
             "latitude": 48.858222,
             "longitude": 2.2945,
             "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/The_Eiffel_Tower_seen_from_Esplanade_du_Trocaredo_%28Paris%2C_France%2C_DSC_0344%29.jpg",
@@ -25,9 +25,9 @@
     },
     {
         "iso2": "DE",
-        "name": "Deutschland",
+        "name": "Germany",
         "landmark": {
-            "name": "Brandenburger Tor in Berlin",
+            "name": "Brandenburg Gate in Berlin",
             "latitude": 52.516272,
             "longitude": 13.377722,
             "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Brandenburg_Gate_%288324920752%29.jpg",
@@ -37,7 +37,7 @@
     },
     {
         "iso2": "EL",
-        "name": "Griechenland",
+        "name": "Greece",
         "landmark": {
             "name": "Akropolis in Athen",
             "latitude": 37.970833,
@@ -49,9 +49,9 @@
     },
     {
         "iso2": "AT",
-        "name": "Österreich",
+        "name": "Austria",
         "landmark": {
-            "name": "Österreichische Alpen",
+            "name": "Austrian Alps",
             "latitude": 47.074531,
             "longitude": 12.6939,
             "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Gro%C3%9Fglockner_Hochalpenstra%C3%9Fe.JPG",
