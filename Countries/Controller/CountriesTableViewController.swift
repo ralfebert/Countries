@@ -8,11 +8,11 @@ struct Country {
 class CountriesTableViewController: UITableViewController {
 
     let countries = [
+        Country(isoCode: "at", name: "Austria"),
         Country(isoCode: "be", name: "Belgium"),
-        Country(isoCode: "bg", name: "Bulgaria"),
+        Country(isoCode: "de", name: "Germany"),
         Country(isoCode: "el", name: "Greece"),
-        Country(isoCode: "lt", name: "Lithuania"),
-        Country(isoCode: "pt", name: "Portugal"),
+        Country(isoCode: "fr", name: "France"),
     ]
 
     // MARK: - Table view data source
@@ -30,6 +30,8 @@ class CountriesTableViewController: UITableViewController {
 
         let country = countries[indexPath.row]
         cell.textLabel?.text = country.name
+        cell.detailTextLabel?.text = country.isoCode
+        cell.imageView?.image = UIImage(named: country.isoCode)
 
         return cell
     }
