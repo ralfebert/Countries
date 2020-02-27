@@ -5,6 +5,12 @@ struct Country {
     var name: String
 }
 
+class CountryTableViewCell: UITableViewCell {
+    @IBOutlet weak var countryTitleLabel: UILabel!
+    @IBOutlet weak var countryTextLabel: UILabel!
+    @IBOutlet weak var countryImageView: UIImageView!
+}
+
 class CountriesTableViewController: UITableViewController {
 
     let countries = [
@@ -26,12 +32,12 @@ class CountriesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell", for: indexPath) as! CountryTableViewCell
 
         let country = countries[indexPath.row]
-        cell.textLabel?.text = country.name
-        cell.detailTextLabel?.text = country.isoCode
-        cell.imageView?.image = UIImage(named: country.isoCode)
+        cell.countryTitleLabel?.text = country.name
+        cell.countryTextLabel?.text = country.isoCode
+        cell.countryImageView?.image = UIImage(named: country.isoCode)
 
         return cell
     }
