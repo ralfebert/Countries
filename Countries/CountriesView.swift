@@ -3,35 +3,23 @@
 
 import SwiftUI
 
+@MainActor
 class CountriesModel: ObservableObject {
-
     @Published var countries: [Country] = []
 
-    func reload() {
+    func reload() async {
         let url = URL(string: "https://www.ralfebert.de/examples/v2/countries.json")!
-
         let urlSession = URLSession.shared
 
-        let task = urlSession.dataTask(with: url) { data, _, error in
+        do {
+            let (data, _) = try await urlSession.data(from: url)
+            self.countries = try JSONDecoder().decode([Country].self, from: data)
+        } catch {
             // Error handling in case the data couldn't be loaded
             // For now, only display the error on the console
-            guard let data = data else {
-                debugPrint("Error loading \(url): \(String(describing: error))")
-                return
-            }
-
-            // Parse JSON with JSONDecoder assuming valid JSON data
-            let countries = try! JSONDecoder().decode([Country].self, from: data)
-
-            // Update UI
-            OperationQueue.main.addOperation {
-                self.countries = countries
-            }
+            debugPrint("Error loading \(url): \(String(describing: error))")
         }
-
-        task.resume()
     }
-
 }
 
 struct CountriesView: View {
@@ -41,8 +29,11 @@ struct CountriesView: View {
         List(countriesModel.countries) { country in
             Text(country.name)
         }
-        .onAppear {
-            self.countriesModel.reload()
+        .task {
+            await self.countriesModel.reload()
+        }
+        .refreshable {
+            await self.countriesModel.reload()
         }
     }
 }
