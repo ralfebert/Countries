@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		678C8EF116613E3D478D7F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4872C2319CD609B8B0405F1 /* LaunchScreen.storyboard */; };
 		6F66D7FD55CE639A9F2AA803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55EDB13A71CA814886E1F3AD /* Assets.xcassets */; };
 		9C9C0F7F9B515EEBADDF3B49 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F165044B0EF69A450B8C0A1 /* Country.swift */; };
+		BF195B3726B050E700D1214E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BF195B3626B050E700D1214E /* Kingfisher */; };
 		D91EB2604306137E5BDFD767 /* CountriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EF0A8ED571A675380B5B2 /* CountriesApp.swift */; };
 		F189B8E5F0D07920150760F2 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04222018C1841DEFAC117629 /* CountryListView.swift */; };
 		FFC184CCC2F996E6F70392F3 /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B591410982542FC980E891 /* CountryRowView.swift */; };
@@ -26,7 +27,19 @@
 		6F165044B0EF69A450B8C0A1 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		84306E3F851F05E239AD4C78 /* Countries.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD4EF0A8ED571A675380B5B2 /* CountriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApp.swift; sourceTree = "<group>"; };
+		BF4720EE26B050A8003223EB /* Kingfisher */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Kingfisher; path = "/Users/ralf/Library/Developer/Xcode/DerivedData/Countries-gqimiioyzhyzbsfogcqopekoxylf/SourcePackages/checkouts/Kingfisher"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF4720EC26B05097003223EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF195B3726B050E700D1214E /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		4C7C40427506EB64F04E5687 /* App */ = {
@@ -61,6 +74,7 @@
 			children = (
 				FE8193F60A5388D7B5CCBB32 /* Countries */,
 				9B5D7190A5EB9C73FD4CE995 /* Products */,
+				BF4720ED26B0509C003223EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +93,14 @@
 				C4872C2319CD609B8B0405F1 /* LaunchScreen.storyboard */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		BF4720ED26B0509C003223EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF4720EE26B050A8003223EB /* Kingfisher */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		FE8193F60A5388D7B5CCBB32 /* Countries */ = {
@@ -100,6 +122,7 @@
 			buildConfigurationList = 83DDEAFEA852BD2BFA53C992 /* Build configuration list for PBXNativeTarget "Countries" */;
 			buildPhases = (
 				1A5DE19D030654EF5F254451 /* Sources */,
+				BF4720EC26B05097003223EB /* Frameworks */,
 				8B0A53DFE2BBD09CCB2C6FD9 /* Resources */,
 			);
 			buildRules = (
@@ -107,6 +130,9 @@
 			dependencies = (
 			);
 			name = Countries;
+			packageProductDependencies = (
+				BF195B3626B050E700D1214E /* Kingfisher */,
+			);
 			productName = Countries;
 			productReference = 84306E3F851F05E239AD4C78 /* Countries.app */;
 			productType = "com.apple.product-type.application";
@@ -117,7 +143,7 @@
 		EFDC9B1DFF671A02B02C563D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 96F21ED9CD9D1AA7C826ED8A /* Build configuration list for PBXProject "Countries" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -128,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 89F87A634A96548CB6E68FBA;
+			packageReferences = (
+				BF195B3526B050E700D1214E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -234,6 +263,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -286,6 +316,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -343,6 +374,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF195B3526B050E700D1214E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF195B3626B050E700D1214E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF195B3526B050E700D1214E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFDC9B1DFF671A02B02C563D /* Project object */;
 }

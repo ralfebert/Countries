@@ -1,11 +1,12 @@
 import SwiftUI
+import Kingfisher
 
 struct CountryRowView: View {
     let country: Country
 
     var body: some View {
         HStack {
-            Image("placeholder")
+            KFImage(country.landmark.imageUrl)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50)
