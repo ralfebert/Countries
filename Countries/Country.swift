@@ -4,8 +4,6 @@
 import Foundation
 
 struct Country: Identifiable, Codable {
-
     var id: String
     var name: String
-
 }
