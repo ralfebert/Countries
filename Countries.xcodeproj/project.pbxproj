@@ -12,6 +12,7 @@
 		BF3F1384271185BB00BD9255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3F1382271185BB00BD9255 /* Main.storyboard */; };
 		BF3F1386271185BC00BD9255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3F1385271185BC00BD9255 /* Assets.xcassets */; };
 		BF3F1389271185BC00BD9255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3F1387271185BC00BD9255 /* LaunchScreen.storyboard */; };
+		BFD30465271187650035F6EA /* CountriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD30464271187650035F6EA /* CountriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BF3F1385271185BC00BD9255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF3F1388271185BC00BD9255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF3F138A271185BC00BD9255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD30464271187650035F6EA /* CountriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BF3F137C271185BB00BD9255 /* AppDelegate.swift */,
 				BF3F137E271185BB00BD9255 /* SceneDelegate.swift */,
+				BFD30464271187650035F6EA /* CountriesTableViewController.swift */,
 				BF3F1382271185BB00BD9255 /* Main.storyboard */,
 				BF3F1385271185BC00BD9255 /* Assets.xcassets */,
 				BF3F1387271185BC00BD9255 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3F137D271185BB00BD9255 /* AppDelegate.swift in Sources */,
+				BFD30465271187650035F6EA /* CountriesTableViewController.swift in Sources */,
 				BF3F137F271185BB00BD9255 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
