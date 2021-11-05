@@ -4,18 +4,20 @@
 import SwiftUI
 
 struct CountriesView: View {
-    @StateObject var countriesModel = CountriesModel()
+    let countries = countriesExampleData()
 
     var body: some View {
-        List(countriesModel.countries) { country in
-            Text(country.name)
+        List(countries) { country in
+            NavigationLink(
+                destination: {
+                    CountryInfoView(country: country)
+                },
+                label: {
+                    CountryRowView(country: country)
+                }
+            )
         }
-        .task {
-            await self.countriesModel.reload()
-        }
-        .refreshable {
-            await self.countriesModel.reload()
-        }
+        .navigationBarTitle("Countries")
     }
 }
 
