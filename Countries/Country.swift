@@ -3,14 +3,7 @@
 
 import Foundation
 
-struct Country: Identifiable {
-    var id: String
-    var name: String
-    var capital: String
-    var population: Int
-    var historyFact: String?
-}
-
+/*
 func countriesExampleData() -> [Country] {
     [
         Country(
@@ -45,5 +38,13 @@ func countriesExampleData() -> [Country] {
             capital: "Paris",
             population: 67_413_000
         ),
+        Country(
+            id: "gb",
+            name: "United Kingdom",
+            capital: "London",
+            population: 67_081_000,
+            currency: Currency(name: "£", exchangeRateToEuro: 1.17)
+        ),
     ]
 }
+*/
