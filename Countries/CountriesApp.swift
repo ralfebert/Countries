@@ -7,7 +7,9 @@ import SwiftUI
 struct CountriesApp: App {
     var body: some Scene {
         WindowGroup {
-            CountriesView()
+            NavigationView {
+                CountriesView()
+            }
         }
     }
 }
