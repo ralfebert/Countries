@@ -9,9 +9,20 @@ struct CountryInfoView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image("\(country.id.lowercased())")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            if let imageUrl = country.imageUrl {
+                AsyncImage(
+                    url: imageUrl,
+                    content: { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
+            }
+            
             VStack(alignment: .leading, spacing: 15) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text("**Population** \(Int(country.population / 1_000_000)) Mio.")
