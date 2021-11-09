@@ -7,7 +7,6 @@ struct CurrencyConverterView: View {
     var currency: Currency
 
     @State var amount: Decimal = 1
-    @State var amountEuro: Decimal = 0
 
     var body: some View {
         VStack {
@@ -19,15 +18,12 @@ struct CurrencyConverterView: View {
                     .font(.headline)
             }
             HStack {
-                Text(self.amountEuro, format: .number)
+                Text(self.amount * currency.exchangeRateToEuro, format: .number)
                     .padding(6)
                 Spacer()
                 Text("€")
                     .font(.headline)
             }
-        }
-        .onChange(of: amount) { newValue in
-            self.amountEuro = newValue * currency.exchangeRateToEuro
         }
 
     }
