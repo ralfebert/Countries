@@ -21,3 +21,7 @@ Licensed under the Creative Commons Attribution-Share Alike 4.0 International li
 gb.jpg
 https://commons.wikimedia.org/wiki/File:Tower_Bridge_from_Shad_Thames.jpg
 This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license. Author: Colin
+
+ch.jpg
+https://en.wikivoyage.org/wiki/File:Matterhorn_Reflected_in_Riffelsee.JPG
+This file is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported license. Author: Bass fishing physicist

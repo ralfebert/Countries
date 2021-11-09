@@ -45,6 +45,13 @@ func countriesExampleData() -> [Country] {
             population: 67_081_000,
             currency: Currency(name: "£", exchangeRateToEuro: 1.17)
         ),
+        Country(
+            id: "ch",
+            name: "Switzerland",
+            capital: "Bern",
+            population: 8_570_146,
+            currency: Currency(name: "CHF", exchangeRateToEuro: 0.94)
+        ),
     ]
 }
 */
