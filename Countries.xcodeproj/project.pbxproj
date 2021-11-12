@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4D1D27273BFC12000DB65B /* CountriesEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D1D26273BFC12000DB65B /* CountriesEndpoints.swift */; };
 		BF5F6F7626A08CEF00BAC323 /* CountriesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F6F7526A08CEF00BAC323 /* CountriesApp.swift */; };
-		BF5F6F7826A08CEF00BAC323 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F6F7726A08CEF00BAC323 /* CountriesView.swift */; };
+		BF5F6F7826A08CEF00BAC323 /* LoadCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F6F7726A08CEF00BAC323 /* LoadCountriesView.swift */; };
 		BF5F6F7A26A08CF000BAC323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F6F7926A08CF000BAC323 /* Assets.xcassets */; };
 		BF5F6F7D26A08CF000BAC323 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5F6F7C26A08CF000BAC323 /* Preview Assets.xcassets */; };
 		BF5F6F8426A08CFF00BAC323 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5F6F8326A08CFF00BAC323 /* Country.swift */; };
-		BF771318273AFC0D000E9134 /* CountryEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF771317273AFC0D000E9134 /* CountryEndpoints.swift */; };
-		BF77131B273AFC5E000E9134 /* AsyncModel in Frameworks */ = {isa = PBXBuildFile; productRef = BF77131A273AFC5E000E9134 /* AsyncModel */; };
 		BF81A56D2735B488005AF5E5 /* CurrencyConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF81A56C2735B488005AF5E5 /* CurrencyConverterView.swift */; };
+		BF9D446D273EC94900144448 /* CountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D446C273EC94900144448 /* CountriesView.swift */; };
 		BFC7F03E2735974700211A41 /* CountryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7F03D2735974700211A41 /* CountryInfoView.swift */; };
 		BFC7F04027359B5F00211A41 /* CountryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7F03F27359B5F00211A41 /* CountryRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF4D1D26273BFC12000DB65B /* CountriesEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesEndpoints.swift; sourceTree = "<group>"; };
 		BF5F6F7226A08CEF00BAC323 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5F6F7526A08CEF00BAC323 /* CountriesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesApp.swift; sourceTree = "<group>"; };
-		BF5F6F7726A08CEF00BAC323 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
+		BF5F6F7726A08CEF00BAC323 /* LoadCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCountriesView.swift; sourceTree = "<group>"; };
 		BF5F6F7926A08CF000BAC323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5F6F7C26A08CF000BAC323 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF5F6F8326A08CFF00BAC323 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		BF771317273AFC0D000E9134 /* CountryEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryEndpoints.swift; sourceTree = "<group>"; };
-		BF77131C273AFD91000E9134 /* AsyncModel */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AsyncModel; path = "../../../ios-examples/AsyncModel"; sourceTree = "<group>"; };
 		BF81A56C2735B488005AF5E5 /* CurrencyConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverterView.swift; sourceTree = "<group>"; };
+		BF9D446C273EC94900144448 /* CountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesView.swift; sourceTree = "<group>"; };
 		BFC7F03D2735974700211A41 /* CountryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoView.swift; sourceTree = "<group>"; };
 		BFC7F03F27359B5F00211A41 /* CountryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,13 +38,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF77131B273AFC5E000E9134 /* AsyncModel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF4D1D20273BFB12000DB65B /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				BF4D1D26273BFC12000DB65B /* CountriesEndpoints.swift */,
+				BF5F6F8326A08CFF00BAC323 /* Country.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		BF4D1D21273BFB1B000DB65B /* Country List */ = {
+			isa = PBXGroup;
+			children = (
+				BF5F6F7726A08CEF00BAC323 /* LoadCountriesView.swift */,
+				BF9D446C273EC94900144448 /* CountriesView.swift */,
+				BFC7F03F27359B5F00211A41 /* CountryRowView.swift */,
+			);
+			path = "Country List";
+			sourceTree = "<group>";
+		};
 		BF5F6F6926A08CEF00BAC323 = {
 			isa = PBXGroup;
 			children = (
@@ -65,15 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				BF5F6F7526A08CEF00BAC323 /* CountriesApp.swift */,
-				BF5F6F7726A08CEF00BAC323 /* CountriesView.swift */,
 				BF5F6F7926A08CF000BAC323 /* Assets.xcassets */,
 				BF5F6F7B26A08CF000BAC323 /* Preview Content */,
-				BF5F6F8326A08CFF00BAC323 /* Country.swift */,
-				BFC7F03D2735974700211A41 /* CountryInfoView.swift */,
-				BFC7F03F27359B5F00211A41 /* CountryRowView.swift */,
-				BF81A56C2735B488005AF5E5 /* CurrencyConverterView.swift */,
-				BF771317273AFC0D000E9134 /* CountryEndpoints.swift */,
-				BF77131C273AFD91000E9134 /* AsyncModel */,
+				BF4D1D20273BFB12000DB65B /* Endpoints */,
+				BF4D1D21273BFB1B000DB65B /* Country List */,
+				BF9D446E273ECA4E00144448 /* Country Info */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -84,6 +98,15 @@
 				BF5F6F7C26A08CF000BAC323 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BF9D446E273ECA4E00144448 /* Country Info */ = {
+			isa = PBXGroup;
+			children = (
+				BFC7F03D2735974700211A41 /* CountryInfoView.swift */,
+				BF81A56C2735B488005AF5E5 /* CurrencyConverterView.swift */,
+			);
+			path = "Country Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +126,6 @@
 			);
 			name = Countries;
 			packageProductDependencies = (
-				BF77131A273AFC5E000E9134 /* AsyncModel */,
 			);
 			productName = Countries;
 			productReference = BF5F6F7226A08CEF00BAC323 /* Countries.app */;
@@ -134,7 +156,6 @@
 			);
 			mainGroup = BF5F6F6926A08CEF00BAC323;
 			packageReferences = (
-				BF771319273AFC5E000E9134 /* XCRemoteSwiftPackageReference "AsyncModel" */,
 			);
 			productRefGroup = BF5F6F7326A08CEF00BAC323 /* Products */;
 			projectDirPath = "";
@@ -162,11 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF771318273AFC0D000E9134 /* CountryEndpoints.swift in Sources */,
 				BFC7F03E2735974700211A41 /* CountryInfoView.swift in Sources */,
-				BF5F6F7826A08CEF00BAC323 /* CountriesView.swift in Sources */,
+				BF5F6F7826A08CEF00BAC323 /* LoadCountriesView.swift in Sources */,
+				BF4D1D27273BFC12000DB65B /* CountriesEndpoints.swift in Sources */,
 				BFC7F04027359B5F00211A41 /* CountryRowView.swift in Sources */,
 				BF5F6F8426A08CFF00BAC323 /* Country.swift in Sources */,
+				BF9D446D273EC94900144448 /* CountriesView.swift in Sources */,
 				BF81A56D2735B488005AF5E5 /* CurrencyConverterView.swift in Sources */,
 				BF5F6F7626A08CEF00BAC323 /* CountriesApp.swift in Sources */,
 			);
@@ -299,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Countries/Preview Content\"";
+				DEVELOPMENT_TEAM = R476D442DR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -327,6 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Countries/Preview Content\"";
+				DEVELOPMENT_TEAM = R476D442DR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -369,25 +393,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BF771319273AFC5E000E9134 /* XCRemoteSwiftPackageReference "AsyncModel" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ralfebert/AsyncModel.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BF77131A273AFC5E000E9134 /* AsyncModel */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BF771319273AFC5E000E9134 /* XCRemoteSwiftPackageReference "AsyncModel" */;
-			productName = AsyncModel;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BF5F6F6A26A08CEF00BAC323 /* Project object */;
 }

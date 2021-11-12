@@ -25,12 +25,11 @@ struct CurrencyConverterView: View {
                     .font(.headline)
             }
         }
-
     }
 }
 
 struct CurrencyConverterView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyConverterView(currency: countriesExampleData().compactMap { $0.currency }.first!)
+        CurrencyConverterView(currency: Country.exampleData.compactMap(\.currency).first!)
     }
 }

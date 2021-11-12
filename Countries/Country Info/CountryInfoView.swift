@@ -1,7 +1,6 @@
 // (C) 2019, Ralf Ebert - iOS Example Project: Countries
 // License: https://opensource.org/licenses/MIT
 
-import MapKit
 import SwiftUI
 
 struct CountryInfoView: View {
@@ -9,24 +8,29 @@ struct CountryInfoView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            if let imageUrl = country.imageUrl {
-                AsyncImage(
-                    url: imageUrl,
-                    content: { image in
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    },
-                    placeholder: {
-                        ProgressView()
-                    }
-                )
+            ZStack {
+                Color.clear
+                ProgressView()
+                if let imageUrl = country.imageUrl {
+                    AsyncImage(
+                        url: imageUrl,
+                        content: { image in
+                            image
+                                .resizable()
+                        },
+                        placeholder: {
+                            ProgressView()
+                        }
+                    )
+                }
             }
-            
+            .aspectRatio(4 / 3, contentMode: .fit)
+            .frame(maxWidth: .infinity)
+
             VStack(alignment: .leading, spacing: 15) {
                 VStack(alignment: .leading, spacing: 5) {
                     Text("**Population** \(Int(country.population / 1_000_000)) Mio.")
-                    Text("**Capital**: \(country.capital)")
+                    Text("**Capital** \(country.capital)")
                 }
 
                 if let historyFact = country.historyFact {
@@ -52,6 +56,6 @@ struct CountryInfoView: View {
 
 struct CountryView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryInfoView(country: countriesExampleData()[0])
+        CountryInfoView(country: Country.exampleData[0])
     }
 }

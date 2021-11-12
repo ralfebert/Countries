@@ -15,6 +15,6 @@ struct CountryRowView: View {
 
 struct CountryRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CountryRowView(country: countriesExampleData()[0])
+        CountryRowView(country: Country.exampleData[0])
     }
 }
