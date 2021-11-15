@@ -8,7 +8,7 @@ class CountriesModel: ObservableObject {
     @Published var countries: [Country] = []
 
     func reload() async {
-        let url = URL(string: "https://www.ralfebert.de/examples/v2/countries.json")!
+        let url = URL(string: "https://www.ralfebert.de/examples/v3/countries.json")!
         let urlSession = URLSession.shared
 
         do {
