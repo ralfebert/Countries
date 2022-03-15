@@ -8,8 +8,14 @@ struct Country: Identifiable {
     var name: String
     var capital: String
     var population: Int
+    var drivingSide: DrivingSide
     var historyFact: String?
     var currency: Currency?
+}
+
+enum DrivingSide {
+    case right
+    case left
 }
 
 struct Currency {
@@ -23,13 +29,15 @@ func countriesExampleData() -> [Country] {
             id: "at",
             name: "Austria",
             capital: "Vienna",
-            population: 8_935_112
+            population: 8_935_112,
+            drivingSide: .right
         ),
         Country(
             id: "be",
             name: "Belgium",
             capital: "Brussels",
             population: 11_492_641,
+            drivingSide: .right,
             historyFact: "In Belgium, there was no elected government for 589 days in 2010."
         ),
         Country(
@@ -37,25 +45,29 @@ func countriesExampleData() -> [Country] {
             name: "Germany",
             capital: "Berlin",
             population: 83_190_556,
+            drivingSide: .right,
             historyFact: "Germany was separated in two separate countries until 1989."
         ),
         Country(
             id: "gr",
             name: "Greece",
             capital: "Athens",
-            population: 10_718_565
+            population: 10_718_565,
+            drivingSide: .right
         ),
         Country(
             id: "fr",
             name: "France",
             capital: "Paris",
-            population: 67_413_000
+            population: 67_413_000,
+            drivingSide: .right
         ),
         Country(
             id: "gb",
             name: "United Kingdom",
             capital: "London",
             population: 67_081_000,
+            drivingSide: .right,
             currency: Currency(name: "£", exchangeRateToEuro: 1.17)
         ),
         Country(
@@ -63,6 +75,7 @@ func countriesExampleData() -> [Country] {
             name: "Switzerland",
             capital: "Bern",
             population: 8_570_146,
+            drivingSide: .right,
             currency: Currency(name: "CHF", exchangeRateToEuro: 0.94)
         ),
     ]
